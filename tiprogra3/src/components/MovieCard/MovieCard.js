@@ -29,7 +29,7 @@ class MovieCard extends Component {
                 <h3 className="movie-title">{title}</h3>
               </li>
               <li>
-                <p className="movie-description">Descripción breve de la película</p>
+                <button className="movie-description">Mas info</button>
               </li>
               <li>
                 <p className="movie-rating">Rating:</p>

@@ -1,5 +1,5 @@
 .movie-card {
-    background-color: #fff;
+    background-color: #2c2b2b;
     border-radius: 10px;
     overflow: hidden;
     padding: 20px;
@@ -25,17 +25,18 @@
   .movie-title {
     font-size: 20px;
     font-weight: bold;
-    color: #333;
+    color: #ffff;
     margin: 0;
     text-align: center;
   }
   
   .movie-description {
     font-size: 14px;
-    color: #666;
+    color: #494949;
     text-align: center;
-    margin: 0;
-    padding: 0 10px;
+    margin: 0 auto; 
+    display: block; 
+    width: fit-content;
   }
   
   .movie-rating {
