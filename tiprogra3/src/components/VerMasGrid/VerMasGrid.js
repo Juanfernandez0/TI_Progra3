@@ -16,38 +16,36 @@ class VerMas extends Component {
         const  apiRuta = this.props.ruta; 
     
         fetch(apiRuta)
-          .then(response => response.json())
-          .then(data => {
-            if (data && data.results) {
-              this.setState({ movies: data.results });
-            } else {
-              console.error("No se encuentran películas");
-            }
-          })
-          .catch(error => console.log(error));
-      }
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.results) {
+            this.setState({ pelis: data.results.slice(0, 6) });
+        } else {
+          console.error("No se encuentran películas");
+        }
+      })
+      .catch(error => console.log(error));
+
+        
+    }
+
+    
     render(){
-        return (
-                    <div className="movie-grid-container">
-        <ul className="movie-row">
-            <li className="movie-item"> <MovieCard /> </li>
-            <li className="movie-item"> <MovieCard /> </li>
-            <li className="movie-item"> <MovieCard /> </li>
-        </ul>
 
-        <ul className="movie-row">
-            <li className="movie-item"> <MovieCard /> </li>
-            <li className="movie-item"> <MovieCard /> </li>
-            <li className="movie-item"> <MovieCard /> </li>
-        </ul>
+        const { pelis }= this.state
 
-        <ul className="movie-row">
-            <li className="movie-item"> <MovieCard /> </li>
-            <li className="movie-item"> <MovieCard /> </li>
-            <li className="movie-item"> <MovieCard /> </li>
-        </ul>
-        </div>
 
+
+        return ( 
+        <div className="movie-grid-container">
+            <ul className="movie-row">
+              {pelis.map(peli => (
+                <li key={peli.id} className="movie-item">
+                  <MovieCard id={peli.id} peli={peli} />
+                </li>
+              ))}
+            </ul>
+          </div>
         );
     
 }}
