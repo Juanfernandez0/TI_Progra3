@@ -7,7 +7,10 @@ import Footer from "./components/Footer/Footer";
 
 import NotFound from "./pages/NotFound";
 import SearchResults from "./pages/SearchResult";
-import ver_todas from "./pages/ver_todas";
+import VerPopulares from "./pages/VerPopulares";
+import VerCartelera from "./pages/VerCartelera";
+import Favoritos from './pages/Favoritos';
+
 
 
 function App() {
