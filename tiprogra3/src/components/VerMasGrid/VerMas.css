@@ -1,0 +1,23 @@
+.movie-grid-container {
+    padding: 20px;
+    background-color: #1c1c1c;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .movie-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+  .movie-item {
+    width: 30%;
+    background-color: #ee22;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
