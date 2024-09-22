@@ -5,6 +5,9 @@ const Header = () => {
     return (
 
        <nav className="navbar">
+         <div className="logo">
+            <img src="./colibr-cines-high-resolution-logo-transparent.png" alt="logo" />
+         </div>
          <a className="navbar-brand">CineBox</a>
          <ul className="main-nav">
              <li><Link to="/">Home</Link></li>
