@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import "./MovieCard.css"
+import { Link } from "react-router-dom"
 
 
 class MovieCard extends Component {
@@ -18,6 +19,7 @@ class MovieCard extends Component {
 
     render() {
         const { id, title, poster_path, overview } = this.props.peli;
+console.log(this.props.peli);
 
         return (
             <div className="movie-card">
@@ -29,7 +31,7 @@ class MovieCard extends Component {
                 <h3 className="movie-title">{title}</h3>
               </li>
               <li>
-                <button className="movie-description">Mas info</button>
+              <Link to={`/movie/${id}`}><button className="botonDetalle">Ver detalle</button></Link>
               </li>
               <li>
                 <p className="movie-rating">Rating:</p>
