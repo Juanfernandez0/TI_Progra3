@@ -1,7 +1,6 @@
 import "./MovieGrid.css";
 import { Link } from "react-router-dom";
 import { Component } from "react";
-import Movie from "../Movie/Movie";
 
 class MovieGrid extends Component {
     constructor(props) {

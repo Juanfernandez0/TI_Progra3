@@ -13,6 +13,7 @@ import SearchResults from "./pages/SearchResult";
 import VerPopulares from "./pages/VerPopulares";
 import VerCartelera from "./pages/VerCartelera";
 import Favoritos from './pages/Favoritos';
+import Home from './pages/Home';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
 
 
       <Switch>
+      <Route path="/" exact component={Home} />
       <Route path="/Populares" exact component={VerPopulares} />
       <Route path="/Cartelera" exact component={VerCartelera} />
       <Route path="/search" exact component={SearchResults} />
