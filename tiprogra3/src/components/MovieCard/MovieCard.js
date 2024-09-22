@@ -76,7 +76,7 @@ class MovieCard extends Component {
                 <img src={`https://image.tmdb.org/t/p/w400${poster_path}`} alt={title} className="movie-img" />
               </li>
               <li>
-               <Link to={`/movies/${id}`}>{title}</Link>
+               <Link to={`/movies/${id}`} className="movie-title">{title}</Link>
               </li>
               <li>
                 <button className="descripcionBoton" onClick={() => this.verDescripcion()}>
@@ -85,12 +85,8 @@ class MovieCard extends Component {
                 {this.state.showExtra && <p>{overview}</p>}
                 <Link to={`/movies/${id}`}><button className="detalleBoton">Ir a detalle</button></Link>
               </li>
-              <li>
-                <button className="movie-description">Mas info</button>
-              </li>
-              <li>
-                <p className="movie-rating">Rating:</p>
-              </li>
+        
+             
             </ul>
           </div>
         );
