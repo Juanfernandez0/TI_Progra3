@@ -68,7 +68,6 @@ class MovieCard extends Component {
 
     render() {
         const { id, title, poster_path, overview } = this.props.peli;
-        console.log(this.props.peli);
 
         return (
             <div className="movie-card">
@@ -87,11 +86,7 @@ class MovieCard extends Component {
                 <Link to={`/movies/${id}`}><button className="detalleBoton">Ir a detalle</button></Link>
               </li>
               <li>
-                <Link to="/favoritos">
-                  <button onClick={this.handleClick} className="favoritosBoton">
-                   {!this.state.esFavorito ? "Agregar a favoritos" : "Quitar de favoritos"}
-                  </button>
-                </Link>
+                <button className="movie-description">Mas info</button>
               </li>
               <li>
                 <p className="movie-rating">Rating:</p>
