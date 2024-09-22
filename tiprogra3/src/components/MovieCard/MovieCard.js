@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 import "./MovieCard.css"
+import { Link } from "react-router-dom"
 
 
 class MovieCard extends Component {
@@ -68,6 +68,7 @@ class MovieCard extends Component {
 
     render() {
         const { id, title, poster_path, overview } = this.props.peli;
+        console.log(this.props.peli);
 
         return (
             <div className="movie-card">
