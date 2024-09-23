@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import "./MovieCard.css"
 import { Link } from "react-router-dom"
-
-
+import { FaRegHeart, FaHeart } from "react-icons/fa";
 class MovieCard extends Component {
 
   constructor(props) {
@@ -30,10 +29,12 @@ class MovieCard extends Component {
   }
 
   agregarFavoritos() {
+    const { peli } = this.props
+
     const storage = localStorage.getItem('favoritos')
     if (storage !== null) {
       const parsedArray = JSON.parse(storage)
-      parsedArray.push(this.props.movie.id)
+      parsedArray.push(peli.id)
       const stringArray = JSON.stringify(parsedArray)
       localStorage.setItem('favoritos', stringArray)
 
@@ -49,9 +50,11 @@ class MovieCard extends Component {
   }
 
   quitarFavoritos() {
+    const { peli } = this.props
+
     const storage = localStorage.getItem('favoritos')
     const parsedArray = JSON.parse(storage)
-    const favoritosRestantes = parsedArray.filter(id => id !== this.props.movie.id)
+    const favoritosRestantes = parsedArray.filter(id => id !== peli.id)
     const stringArray = JSON.stringify(favoritosRestantes)
     localStorage.setItem('favoritos', stringArray)
 
@@ -92,10 +95,10 @@ class MovieCard extends Component {
 
           <li>
 
-            <button onClick={() => this.state.esFavorito ? this.quitarFavoritos() : this.agregarFavoritos()}
+            <button onClick={() => { this.state.esFavorito ? this.quitarFavoritos() : this.agregarFavoritos()}}
               className="favoritosBoton"
             >
-              {!this.state.esFavorito ? "Agregar a favoritos" : "Quitar de favoritos"}
+              {this.state.esFavorito ? <FaHeart size={20} color="red" /> : <FaRegHeart size={20} />}
             </button>
 
 

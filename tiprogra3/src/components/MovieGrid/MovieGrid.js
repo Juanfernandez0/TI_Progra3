@@ -26,9 +26,7 @@ class MovieGrid extends Component {
     }
 
     render() {
-        const { movies } = this.state;
         const { limit, link, titulo } = this.props;
-        const peliculasLimit = limit ? movies.slice(0, limit) : movies;
     
         return (
           <section className='ConteinerPopulares'>
