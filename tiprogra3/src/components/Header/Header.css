@@ -39,9 +39,9 @@ body {
     font-size: 1rem;
     padding: 0.5rem;
     transition: color 0.3s ease;
-  }
+}
   
-  .main-nav a:hover {
+.main-nav a:hover {
     color: #f39c12;
 }
   
@@ -60,3 +60,9 @@ body {
     border-radius: 50%;
     border: 2px solid #f39c12;
 }
+
+.logo img {
+    width: 10%;
+    height: 10%;
+    display: flex;
+  }

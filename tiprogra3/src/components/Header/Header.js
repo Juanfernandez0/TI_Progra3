@@ -1,14 +1,18 @@
 import "./Header.css"
 import { Link } from "react-router-dom"
+import React from 'react'
+import { Component } from "react"
 
-const Header = () => {
+
+
+const Header = (props) => {
     return (
 
        <nav className="navbar">
          <div className="logo">
-            <img src="./colibr-cines-high-resolution-logo-transparent.png" alt="logo" />
+            <img src="/colibr-cines-high-resolution-logo-transparent.png" alt="logo" />
          </div>
-         <a className="navbar-brand">CineBox</a>
+         <a className="navbar-brand">Colibri Cines</a>
          <ul className="main-nav">
              <li><Link to="/">Home</Link></li>
              <li><Link to="/ver_todas">Ver todas</Link></li>
