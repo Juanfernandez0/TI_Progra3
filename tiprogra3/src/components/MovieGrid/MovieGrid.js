@@ -36,6 +36,7 @@ class MovieGrid extends Component {
 
 
     render() {
+      const { movies , moviesAMostrar} = this.state;
         const { limit, link, titulo } = this.props;
     
         return (
