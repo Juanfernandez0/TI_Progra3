@@ -1,7 +1,11 @@
 import "./Header.css"
 import { Link } from "react-router-dom"
+import React from 'react'
+import { Component } from "react"
 
-const Header = () => {
+
+
+const Header = (props) => {
     return (
 
        <nav className="navbar">
