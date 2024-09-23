@@ -28,9 +28,10 @@ function App() {
       <Route path="/Populares" exact component={VerPopulares} />
       <Route path="/Cartelera" exact component={VerCartelera} />
       <Route path="/search" exact component={SearchResults} />
-      <Route component={NotFound} />
+      
       <Route path="/favoritos" exact component={Favoritos}/>
-      <Route path="/movie/:id" exact component={MovieDetail} />
+      <Route path="/movies/:id" exact component={MovieDetail} />
+      <Route component={NotFound} />
     </Switch>
   
 
