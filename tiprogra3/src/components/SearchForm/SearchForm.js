@@ -1,6 +1,5 @@
 import { Component } from 'react'
 import "./SearchForm.css"
-import { query } from 'express-validator'
 import {  Route } from "react-router-dom";
 
 

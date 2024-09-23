@@ -5,34 +5,70 @@
     border-radius: 10px;
     margin-bottom: 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
+  }
   
 
-.titulo_Grup {
+  .titulo_Grup {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .SeccionTitulo {
+    font-size: 1.8rem;
+    color: #f39c12; 
+  }
+  
+
+  .BotonTitulo {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
-}
+  }
   
-.SeccionTitulo {
-    font-size: 1.8rem;
-    color: #f39c12;
-}
 
-  
-.BotonTitulo {
+  .movie-row {
     display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-  
-.BotonTitulo h2 {
-    margin: 0;
-}
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 0;
+    list-style: none;
+    justify-content: center;
+  }
   
 
-.BotonTitulo button {
+  .movie-item {
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 180px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .movie-item:hover {
+    transform: scale(1.05);
+  }
+  
+
+  .movie-item img {
+    width: 100%;
+    border-bottom: 2px solid #f39c12;
+  }
+  
+
+  .movie-item h3 {
+    font-size: 1rem;
+    color: #fff;
+    padding: 0.5rem;
+    text-align: center;
+    background-color: #333;
+  }
+  
+
+  .BotonTitulo button {
     background-color: #f39c12;
     color: #fff;
     padding: 0.5rem 1rem;
@@ -41,22 +77,9 @@
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
+  }
   
-.BotonTitulo button:hover {
+  .BotonTitulo button:hover {
     background-color: #e67e22;
-}
+  }
   
-
-.movie-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    justify-content: center;
-}
-  
-
-.movie-grid .movie-item {
-    flex: 1 1 calc(20% - 1rem);
-    max-width: 200px;
-}
