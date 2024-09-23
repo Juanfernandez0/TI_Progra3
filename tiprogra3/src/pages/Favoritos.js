@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import MovieGrid from '../components/MovieGrid/MovieGrid'
-
 class Favoritos extends Component {
 
     constructor(props) {
@@ -19,15 +18,19 @@ class Favoritos extends Component {
         if (storage !== null) {
         const parsedArray = JSON.parse(storage)
         Promise.all(
-            parsedArray.map((id) => {
-                fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=9c2a46253f55c5578611eba2f0cc979c`)
-                    .then(response => response.json())
-            }).then(data =>
-                this.setState({ 
-                    movies: data
-                })
+            parsedArray.map((id) => 
+              fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=9c2a46253f55c5578611eba2f0cc979c`)
+                .then(response => response.json())
             )
-        )
+          ).then((data) => {
+            this.setState({
+              movies: data,
+              isLoading: false
+            });
+          }).catch((error) => {
+            console.error("Error fetching movies:", error);
+            this.setState({ isLoading: false });
+          });
         this.setState({ isLoading: false })
     }
     }
@@ -35,7 +38,7 @@ class Favoritos extends Component {
 
     render() {
         return (
-            <div> {!this.state.isLoading ? <MovieGrid /> : <p> Loading...</p>}</div>
+            <div> {!this.state.isLoading ? <MovieGrid/> : <p> Loading...</p>}</div>
         )
     }
 }
