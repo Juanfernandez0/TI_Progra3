@@ -1,9 +1,11 @@
 import MovieDetail  from '../components/MovieDetail/MovieDetail'
 
-const Detalle = () => {
+const MovieDetail = () => {
     return (
         <>
+        <main>
         <MovieDetail/>
+        </main>
         </>
     )
 }

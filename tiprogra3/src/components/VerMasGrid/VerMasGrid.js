@@ -28,7 +28,7 @@ class VerMas extends Component {
             .catch(error => console.log(error));
     }
 
-    mostrarMas(){
+    mostrarMas = () => {
         this.setState({
             pelisAMostrar: this.state.pelisAMostrar + 6
         });
