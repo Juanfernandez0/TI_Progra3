@@ -1,13 +1,13 @@
 import MovieDetail  from '../components/MovieDetail/MovieDetail'
 
-const MovieDetail = () => {
+const MovieDetailPage = (props) => {
     return (
         <>
         <main>
-        <MovieDetail/>
+        <MovieDetail {...props}/>
         </main>
         </>
     )
 }
 
-export default MovieDetail
+export default MovieDetailPage

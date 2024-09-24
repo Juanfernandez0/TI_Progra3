@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./FavoritosComponent.css";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
-
+import { Link } from "react-router-dom"
 class FavoritosComponent extends Component {
   constructor(props) {
     super(props);
@@ -45,6 +45,7 @@ class FavoritosComponent extends Component {
           <li>
             <p className="movie-description">{movie.overview}</p>
           </li>
+          <Link to={`/movies/${movie.id}`}><button className="detalleBoton">Ir a detalle</button></Link>
           <li className="favoritos-container">
           <button onClick={() => { this.state.esFavorito ? this.quitarFavoritos() : this.agregarFavoritos()}}
               className="favoritosBoton"
