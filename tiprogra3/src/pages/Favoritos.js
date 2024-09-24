@@ -1,5 +1,8 @@
 import React, { Component } from "react"
 import MovieGrid from '../components/MovieGrid/MovieGrid'
+import FavoritosComponent from "../components/FavoritosComponent/FavoritosComponent"; // Importa el nuevo componente
+
+
 class Favoritos extends Component {
 
     constructor(props) {
@@ -35,12 +38,40 @@ class Favoritos extends Component {
     }
     }
 
-
+    quitarFavoritos() {
+        const { peli } = this.props
+    
+        const storage = localStorage.getItem('favoritos')
+        const parsedArray = JSON.parse(storage)
+        const favoritosRestantes = parsedArray.filter(id => id !== peli.id)
+        const stringArray = JSON.stringify(favoritosRestantes)
+        localStorage.setItem('favoritos', stringArray)
+    
+        this.setState({
+          esFavorito: false
+        })
+    
+      }
     render() {
+        const { movies, isLoading } = this.state; // Destructura correctamente el estado
+    
         return (
-            <div> {!this.state.isLoading ? <MovieGrid/> : <p> Loading...</p>}</div>
-        )
+            <div>
+                <h1 className="favoritos-title">Estas son tus Peliculas favoritas:</h1>
+                {isLoading ? (
+                    <p>Loading...</p>
+                ) : (
+                    <div className="favorites-grid">
+                        {movies.map((movie) => (
+                            <FavoritosComponent key={movie.id} movie={movie} />
+                        ))}
+                        
+                    </div>
+                )}
+            </div>
+        );
     }
+    
 }
 
 export default Favoritos

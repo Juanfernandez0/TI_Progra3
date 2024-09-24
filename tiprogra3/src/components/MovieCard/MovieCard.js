@@ -63,6 +63,7 @@ class MovieCard extends Component {
     })
 
   }
+  
 
   verDescripcion() {
     this.setState({
