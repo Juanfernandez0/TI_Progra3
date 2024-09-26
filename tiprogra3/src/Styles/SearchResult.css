@@ -1,0 +1,24 @@
+.movie-grid-container {
+    
+    background-color: #1c1c1c;
+    display: flex;
+    flex-wrap: wrap; 
+  }
+  
+  .movie-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 15%;
+    margin-right: 15%;
+
+    padding-left: 0;
+  }
+
+
+  .movie-item {
+    margin-bottom: 20px;
+    width: 30%;
+    border-radius: 10px;
+    overflow: hidden;
+  }

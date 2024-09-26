@@ -36,6 +36,10 @@ class VerMas extends Component {
 
     render() {
         const { pelis, pelisAMostrar } = this.state;
+
+        if (!pelis) {
+            return <p>Cargando...</p>; 
+        }
         
         return ( 
             <div className="movie-grid-container">

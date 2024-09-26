@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import MovieCard  from '../components/MovieCard/MovieCard'
+import VerMas from '../components/VerMasGrid/VerMasGrid'
 
 export class SearchResult extends Component {
   constructor(props){
@@ -28,23 +28,23 @@ export class SearchResult extends Component {
 
   render() {
     const { pelis, error } = this.state;
+    const query = this.props.location.state.query;
+    const apiKey = '9c2a46253f55c5578611eba2f0cc979c';
 
     return (
-      <div className='main-container'>
+
+
+      <div>
         Resultados de busqueda de : {this.props.location.state.query}
-
-
-        <div className=''>
-          {pelis.length > 0 ? (
-            pelis.map((peli) => (
-              <MovieCard peli={peli}/>
-            ))
+          
+            {pelis.length > 0 ? ( 
+              <VerMas ruta={`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${query}`}/>
           ) : (
             <p>No se encontraron resultados.</p>
           )}
+    
         </div>
 
-      </div>
     )
   }
 }

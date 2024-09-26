@@ -75,6 +75,10 @@ class MovieCard extends Component {
   render() {
     const { id, title, poster_path, overview } = this.props.peli;
 
+    if (!poster_path) {
+      return <p>Cargando...</p>; 
+  }
+
     return (
 
       <div className="movie-card" >
