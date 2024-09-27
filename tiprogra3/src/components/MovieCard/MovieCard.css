@@ -41,20 +41,20 @@
   
   .movie-rating {
     font-size: 16px;
-    color: #ff9800; /* Color dorado para el rating */
+    color: #ff9800; 
     text-align: center;
   }
   
   .favoritosBoton {
-    background: transparent; /* Quita el fondo blanco */
-    border: none; /* Quita el borde */
-    cursor: pointer; /* Cambia el cursor al pasar por encima */
-    display: flex; /* Permite centrar el contenido */
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    padding: 0; /* Elimina el padding */
+    background: transparent; 
+    border: none; 
+    cursor: pointer;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 0; 
   }
   .favoritos-container {
-    margin-top: 10px; /* Espaciado superior para separación */
-    width: 100%; /* Asegúrate de que ocupe todo el ancho */
+    margin-top: 10px; 
+    width: 100%;
   }

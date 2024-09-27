@@ -34,11 +34,9 @@ export class SearchResult extends Component {
     return (
 
 
-      <div>
-        Resultados de busqueda de : {this.props.location.state.query}
-          
+      <div>          
             {pelis.length > 0 ? ( 
-              <VerMas ruta={`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${query}`}/>
+              <VerMas ruta={`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${query}`} busqueda ={this.props.location.state.query}/>
           ) : (
             <p>No se encontraron resultados.</p>
           )}
