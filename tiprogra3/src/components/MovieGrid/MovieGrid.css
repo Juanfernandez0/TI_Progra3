@@ -29,12 +29,12 @@
   
 
   .movie-row {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
     gap: 1.5rem;
-    padding: 0;
     list-style: none;
-    justify-content: center;
+    padding: 0;
+    justify-items: center;
   }
   
 
@@ -42,7 +42,7 @@
     background-color: #1c1c1c;
     border-radius: 10px;
     overflow: hidden;
-    width: 180px;
+    width: 160px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
     cursor: pointer;
@@ -68,7 +68,7 @@
   }
   
 
-  .BotonTitulo button {
+  .titulo_Grup button {
     background-color: #f39c12;
     color: #fff;
     padding: 0.5rem 1rem;
@@ -79,7 +79,7 @@
     transition: background-color 0.3s ease;
   }
   
-  .BotonTitulo button:hover {
+  .titulo_Grup button:hover {
     background-color: #e67e22;
   }
   

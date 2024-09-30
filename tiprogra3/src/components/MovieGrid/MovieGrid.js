@@ -42,10 +42,10 @@ class MovieGrid extends Component {
         return (
           <section className='ConteinerPopulares'>
             <div className="titulo_Grup">
-              <div className="BotonTitulo">
-                <h2 className="SeccionTitulo">
+            <h2 className="SeccionTitulo">
                   {titulo} 
                 </h2>
+              <div className="BotonTitulo">
                 <ul className="movie-row">
                     {movies.slice(0, moviesAMostrar).map(movies => (
                         <li key={movies.id} className="movie-item">
@@ -53,8 +53,8 @@ class MovieGrid extends Component {
                         </li>
                     ))}
                 </ul>
-                {limit ? <Link to={link}><button>Ver todas</button></Link> : null}
               </div>
+              {limit ? <Link to={link}><button>Ver todas</button></Link> : null}
             </div>            
           </section>
         );
