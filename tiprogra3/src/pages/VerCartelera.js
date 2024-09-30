@@ -1,4 +1,6 @@
+import React, { Component } from 'react'
 import VerMas from '../components/VerMasGrid/VerMasGrid';
+
 
 
 const VerCartelera = () => {

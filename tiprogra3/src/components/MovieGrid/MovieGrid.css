@@ -1,5 +1,5 @@
 .ConteinerPopulares {
-    padding: 2rem;
+    padding: 20px;
     background-color: #121212;
     color: #fff;
     border-radius: 10px;
@@ -11,7 +11,7 @@
   .titulo_Grup {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    
   }
   
   .SeccionTitulo {
@@ -29,10 +29,13 @@
   
 
   .movie-row {
+    display: flex;
+    flex-wrap: wrap;
     display: grid;
     grid-template-columns: repeat(5, 1fr); /* 5 columns */
     gap: 1.5rem;
     list-style: none;
+    justify-content: space-between;
     padding: 0;
     justify-items: center;
   }
@@ -44,14 +47,8 @@
     overflow: hidden;
     width: 160px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-    cursor: pointer;
   }
-  
-  .movie-item:hover {
-    transform: scale(1.05);
-  }
-  
+
 
   .movie-item img {
     width: 100%;
@@ -74,10 +71,8 @@
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
   }
+
   
   .titulo_Grup button:hover {
     background-color: #e67e22;

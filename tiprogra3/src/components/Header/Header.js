@@ -15,7 +15,6 @@ const Header = (props) => {
          <a className="navbar-brand">Colibri Cines</a>
          <ul className="main-nav">
              <li><Link to="/">Home</Link></li>
-             <li><Link to="/ver_todas">Ver todas</Link></li>
              <li><Link to='/favoritos'>Favoritos</Link></li>
          </ul>
          <ul className="user">
